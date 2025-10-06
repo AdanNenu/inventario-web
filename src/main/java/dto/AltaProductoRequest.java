@@ -8,7 +8,6 @@ import com.inventario.inventario_web.modelo.Producto;
 import com.inventario.inventario_web.modelo.Usuario;
 
 /**
- *
  * @author linki
  */
 public class AltaProductoRequest {
