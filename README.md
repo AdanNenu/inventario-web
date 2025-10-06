@@ -29,4 +29,11 @@ Permite la administración de productos, control de existencias, y manejo de rol
    Desde tu IDE corre el proyecto.
 6. **Probar servicios**
    Abre PosrtMan o SoapUI e importa los XML de las colleciones de prueba. Estan en la carpeta de PRUEBAS.
+
+   BackLog:
+   https://docs.google.com/spreadsheets/d/1NAmB0guYeZpY1_ntoG9RhCkeaeEA-i7zpmW8snEObIw/edit?usp=sharing
+   Video explicativo en YouTube:
+   https://www.youtube.com/watch?v=Vz9ALbA7_00
+   Video explicativo en Drive:
+   https://drive.google.com/file/d/191jCL3V_EZhz-Ty1pDNjlzgqE-wX9Ldq/view?usp=sharing
    
