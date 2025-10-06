@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "a6bd958b-4947-49e7-adfb-866c4bac0178",
+		"name": "ProductoService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33997262",
+		"_collection_link": "https://crimson-capsule-915586.postman.co/workspace/New-Team-Workspace~fa460d1f-4009-4d80-9319-db933ef5b2f7/collection/33997262-a6bd958b-4947-49e7-adfb-866c4bac0178?action=share&source=collection_link&creator=33997262"
+	},
+	"item": [
+		{
+			"name": "Alta produto Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta produto Almacenista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver módulo Inv. Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver módulo Inv. Almacenista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reactivar Producto Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Desactivar Producto Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Desactivar Producto Almacenista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reactivar Producto Almacneista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Existencias Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restar Existencias Admin",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/1/sumar/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"1",
+						"sumar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Existencias Almacenista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restar Existencias Almacenista",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Existencia inicial 0",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"producto\": {\r\n    \"idProducto\": 0,\r\n    \"nombre\": \"Mouse Logitech MX Master 3\",\r\n    \"costo\": 950.75,\r\n    \"existencia\": 25,\r\n    \"estatus\": 1\r\n  },\r\n  \"usuario\": {\r\n    \"idUsuario\": 1,\r\n    \"nombre\": \"adanadmin\",\r\n    \"correo\": \"adanadmin@inventariocastores.com\",\r\n    \"contrasena\": \"admin123\",\r\n    \"estatus\": 1,\r\n    \"rol\": {\r\n      \"idRol\": 1,\r\n      \"nombreRol\": \"Administrador\",\r\n      \"descripcion\": \"Rol administrador con casi todos los permisos, menos salidas\",\r\n      \"lstPermisos\": [\r\n        {\r\n          \"idPermiso\": 1,\r\n          \"nombrePermiso\": \"ver_modulo_inventario\",\r\n          \"descripcion\": \"Permite acceder al módulo de inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 2,\r\n          \"nombrePermiso\": \"alta_producto\",\r\n          \"descripcion\": \"Permite dar de alta productos nuevos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 3,\r\n          \"nombrePermiso\": \"sumar_existencias\",\r\n          \"descripcion\": \"Permite agregar existencias al inventario\"\r\n        },\r\n        {\r\n          \"idPermiso\": 4,\r\n          \"nombrePermiso\": \"inactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como inactivo\"\r\n        },\r\n        {\r\n          \"idPermiso\": 7,\r\n          \"nombrePermiso\": \"ver_modulo_historico\",\r\n          \"descripcion\": \"Permite acceder al módulo historial de movimientos\"\r\n        },\r\n        {\r\n          \"idPermiso\": 8,\r\n          \"nombrePermiso\": \"reactivar_producto\",\r\n          \"descripcion\": \"Permite marcar un producto como activo\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/altaProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"altaProducto"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

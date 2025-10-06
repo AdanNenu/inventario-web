@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "aeb39cbd-9d27-4f7e-9e57-d1aeb16897a1",
+		"name": "BitacoraService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33997262",
+		"_collection_link": "https://crimson-capsule-915586.postman.co/workspace/New-Team-Workspace~fa460d1f-4009-4d80-9319-db933ef5b2f7/collection/33997262-aeb39cbd-9d27-4f7e-9e57-d1aeb16897a1?action=share&source=collection_link&creator=33997262"
+	},
+	"item": [
+		{
+			"name": "Ver histórico Admin",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Ver histórico Almacenista",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
