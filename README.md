@@ -22,11 +22,11 @@ Permite la administración de productos, control de existencias, y manejo de rol
    git clone https://github.com/tuusuario/inventario-castores.git
 2. **Importar proyecto desde tu IDE**
 3. **Crear base de datos**
-   Ejecutar el script que viene en la carpeta de SCRIPTS en el proyecto.
+   Ejecutar el script que viene en la carpeta de SCRIPTS en el proyecto. También esta el diagrama E-R.
 4. **Valida el archivo application.properties**
    Cambia el puerto de srping y/o basede datossi es necesario.
 5. **Correr proyecto**
    Desde tu IDE corre el proyecto.
 6. **Probar servicios**
-   Abre PosrtMan o SoapUI e importa los XML de las colleciones de prueba.
+   Abre PosrtMan o SoapUI e importa los XML de las colleciones de prueba. Estan en la carpeta de PRUEBAS.
    
