@@ -19,7 +19,7 @@ Permite la administración de productos, control de existencias, y manejo de rol
 ## Pasos para la ejecución del proyecto
 
 1. **Clonar el reposito**
-   git clone https://github.com/tuusuario/inventario-castores.git
+   git clone https://github.com/AdanNenu/inventario-web.git
 2. **Importar proyecto desde tu IDE**
 3. **Crear base de datos**
    Ejecutar el script que viene en la carpeta de SCRIPTS en el proyecto. También esta el diagrama E-R.
